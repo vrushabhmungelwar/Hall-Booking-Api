@@ -9,7 +9,6 @@ app.use(cors());
 app.use(bodyParser.json());
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`Your app is running with ${port}`));
 
 let rooms = [
   {
@@ -206,3 +205,5 @@ app.post("/createBooking", function (req, res) {
     res.status(200).json({ output: "Room Booking Successfully" });
   }
 });
+
+app.listen(port, () => console.log(`Your app is running with ${port}`));
